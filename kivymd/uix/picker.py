@@ -2985,11 +2985,15 @@ Builder.load_string(
 
 
 <AccentColorSelector@ColorSelector>
-    on_release: app.theme_cls.accent_palette = root.color_name
-
+    on_release: 
+        app.theme_cls.accent_palette = root.color_name
+        app.update_theme()
+    
 
 <PrimaryColorSelector@ColorSelector>
-    on_release: app.theme_cls.primary_palette = root.color_name
+    on_release: 
+        app.theme_cls.primary_palette = root.color_name
+        app.update_theme()
 
 
 <MDThemePicker>
@@ -3064,7 +3068,9 @@ Builder.load_string(
                                 circle: (self.center_x, self.center_y, sp(62))
 
                         user_font_size: "100sp"
-                        on_release: app.theme_cls.theme_style = "Light"
+                        on_release: 
+                            app.theme_cls.theme_style = "Light"
+                            app.update_theme()
 
                     MDIconButton:
                         canvas:
@@ -3074,7 +3080,9 @@ Builder.load_string(
                                 size: self.size
                                 pos: self.pos
 
-                        on_release: app.theme_cls.theme_style = "Dark"
+                        on_release: 
+                            app.theme_cls.theme_style = "Dark"
+                            app.update_theme()
                         user_font_size: "100sp"
 
                 MDFlatButton:
