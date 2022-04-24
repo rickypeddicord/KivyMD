@@ -36,7 +36,7 @@ If you wish to become a project developer (permission to create branches on the 
 ## Installation
 
 ```bash
-pip install kivymd==0.104.2
+pip install https://github.com/rickypeddicord/KivyMD/archive/refs/heads/main.zip
 ```
 
 ### Dependencies:
